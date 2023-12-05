@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace HotelReservations.Repository
 {
-    public interface IRoomRepository
+    public interface IUserRepository
     {
-        List<Room> GetAll();
-        int Insert(Room room);
-        void Update(Room room);
-        void Save(List<Room> roomList);
-        void Delete(int roomId);
+        List<User> GetAll();
+        int Insert(User user);
+        void Update(User user);
+        void Delete(int userId);
     }
 }

@@ -110,7 +110,11 @@ namespace HotelReservations.Windows
             if (MessageBox.Show($"Are you sure that you want to delete room {selectedRoom!.RoomNumber}?",
                 "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                 
+                var roomService = new RoomService();
+           
+                roomService.DeleteRoom(selectedRoom!.Id);
+
+                FillData();
             }
             else
             {

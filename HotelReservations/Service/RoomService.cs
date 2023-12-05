@@ -49,5 +49,20 @@ namespace HotelReservations.Service
                 Hotel.GetInstance().Rooms[index] = room;
             }
         }
+        public void DeleteRoom(int roomId)
+        {
+            var roomRepository = new RoomRepository();
+
+            roomRepository.Delete(roomId);
+
+            var rooms = Hotel.GetInstance().Rooms;
+            var roomToRemove = rooms.FirstOrDefault(r => r.Id == roomId);
+
+            if (roomToRemove != null)
+            {
+                rooms.Remove(roomToRemove);
+            }
+        }
+
     }
 }

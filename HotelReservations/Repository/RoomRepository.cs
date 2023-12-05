@@ -98,5 +98,21 @@ namespace HotelReservations.Repository
         {
             throw new NotImplementedException();
         }
+
+        public void Delete(int roomId)
+        {
+            using (SqlConnection conn = new SqlConnection(Config.CONNECTION_STRING))
+            {
+                conn.Open();
+
+                var command = conn.CreateCommand();
+                command.CommandText = "DELETE FROM dbo.room WHERE room_id = @room_id";
+
+                command.Parameters.Add(new SqlParameter("room_id", roomId));
+
+                command.ExecuteNonQuery();
+            }
+        }
+
     }
 }

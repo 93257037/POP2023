@@ -96,5 +96,10 @@ namespace HotelReservations.Repository
         {
             throw new NotImplementedException();
         }
+
+        void IRoomRepository.Delete(int roomId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
