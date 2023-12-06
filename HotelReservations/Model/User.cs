@@ -12,12 +12,11 @@ namespace HotelReservations.Model
     public class User
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public string JMBG { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-
-        public string UserType { get { return GetType().Name; } }
+        public string UserType { get; set; }
     }
 }

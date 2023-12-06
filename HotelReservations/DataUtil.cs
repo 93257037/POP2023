@@ -58,8 +58,8 @@ namespace HotelReservations
             {
                 Id = 1,
                 JMBG = "10101990123456",
-                Name = "Petar",
-                Surname = "Perić",
+                FirstName = "Petar",
+                LastName = "Perić",
                 Username = "pera",
                 Password = "password",
             };
@@ -67,8 +67,8 @@ namespace HotelReservations
             {
                 Id = 2,
                 JMBG = "09091999654321",
-                Name = "Marko",
-                Surname = "Marković",
+                FirstName = "Marko",
+                LastName = "Marković",
                 Username = "marko",
                 Password = "password",
             };
@@ -76,8 +76,8 @@ namespace HotelReservations
             {
                 Id = 3,
                 JMBG = "0809000654456",
-                Name = "Marija",
-                Surname = "Marić",
+                FirstName = "Marija",
+                LastName = "Marić",
                 Username = "marija",
                 Password = "password",
             };

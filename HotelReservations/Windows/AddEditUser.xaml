@@ -20,45 +20,19 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <StackPanel
-            Grid.Row="1"
-            Grid.Column="1"
-            Orientation="Vertical"
-            >
-            <StackPanel
-                Orientation="Horizontal"
-                >
-                <Label 
-                    Height="30"
-                    Width="150"
-                    Content="User type:"/>
-                <ComboBox 
-                    Name="UserTypeCB"
-                    Height="30" 
-                    Width="150"
-                    VerticalContentAlignment="Center"
-                    />
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Height="30" Width="150" Content="User type:"/>
+                <ComboBox Name="UserTypeCB" Height="30" Width="150" VerticalContentAlignment="Center" SelectionChanged="UserTypeCB_SelectionChanged"/>
+            </StackPanel>
+
+            <StackPanel Name="SpecificFieldsPanel" Orientation="Vertical">
             </StackPanel>
         </StackPanel>
-        <StackPanel
-            Grid.Row="3" Grid.Column="2"
-            Orientation="Horizontal"
-            FlowDirection="RightToLeft"
-            >
-            <Button 
-                Name="SaveBtn"
-                Content="Save"
-                Width="80"
-                Height="30"
-                Margin="5,0,5,0"
-                Click="SaveBtn_Click"
-                />
-            <Button 
-                Name="CancelBtn"
-                Content="Cancel"
-                Width="80"
-                Height="30"
-                />
+
+        <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal" FlowDirection="RightToLeft">
+            <Button Name="SaveBtn" Content="Save" Width="80" Height="30" Margin="5,0,5,0" Click="SaveBtn_Click"/>
+            <Button Name="CancelBtn" Content="Cancel" Width="80" Height="30"/>
         </StackPanel>
     </Grid>
 </Window>
